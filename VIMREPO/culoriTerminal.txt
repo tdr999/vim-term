@@ -1,0 +1,6 @@
+merji pe siteu asta si cauta MONO AMBER ptr terminal https://mayccoll.github.io/Gogh/
+daca esti pe linux
+bash -c  "$(wget -qO- https://git.io/vQgMr)" 
+si apoi scrie 112 s o descarcr
+
+MERGE Ptr orice terminal gtk
