@@ -1,13 +1,13 @@
 set shortmess=a
 "set cmdheight=2"
 "set nocompatible"
-set t_Co=256 "seteaza nr de culori teminal"
+set t_Co=256
 set background=dark
 hi clear
 syntax on
 hi Normal		ctermbg=Black	ctermfg=DarkGray	guibg=Black	guifg=DarkGray
-hi Comment		term=italic	ctermbg=Black		ctermfg=214	guifg=DarkYellow	guibg=Black
-hi Constant		term=underline	ctermfg=214 	guifg=DarkYellow		
+hi Comment		term=italic	ctermbg=Black		ctermfg=214	guifg=#ffaf00	guibg=Black
+hi Constant		term=underline	ctermfg=214 		guifg=#ffaf00		
 hi Identifier		term=underline	ctermfg=DarkRed  	guifg=DarkRed
 hi Ignore		ctermfg=black	guifg=bg
 hi PreProc		term=italic	ctermfg=DarkGreen  	guifg=DarkGreen
@@ -33,7 +33,6 @@ hi StatusLineNC 	term=reverse   	cterm=reverse	  	gui=NONE	guifg=white guibg=#33
 hi Title		term=bold	ctermfg=LightMagenta 	gui=bold	guifg=LightMagenta
 hi WarningMsg		term=standout  	ctermfg=LightRed   	guifg=Red
 
-
 set nocompatible
 set number
 set cindent
@@ -47,20 +46,19 @@ set statusline=
 set statusline+=%#function#\ %l
 set statusline+=\ %*
 set statusline+=\ (
-        set statusline+=\ %f\ %*
-        set statusline+=\ )
+set statusline+=\ %f\ %*
+set statusline+=\ )
 set statusline+=\ %m
 set statusline+=%#keyword#\ %F
 set statusline+=%=
 "set statusline+=\ %{LinterStatus()}"
 set statusline+=\ (
-        set statusline+=\ %{strftime('%R',getftime(expand('%')))}
-        set statusline+=\ ::
-        set statusline+=\ %n
-        set statusline+=\ )\ %*
+set statusline+=\ %{strftime('%R',getftime(expand('%')))}
+set statusline+=\ ::
+set statusline+=\ %n
+set statusline+=\ )\ %*
 "https://kadekillary.work/post/statusline-vim/"
 
 set omnifunc=syntaxcomplete#Complete
 set complete+=kspell
 set completeopt=menuone,longest
-set guifont=Fixedsys:h14
